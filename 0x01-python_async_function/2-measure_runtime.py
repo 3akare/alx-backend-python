@@ -14,7 +14,7 @@ def measure_time(n: int, max_delay: int) -> float:
     measure_time function
     '''
 
-    s = time.time()
+    s: float = time.time()
     asyncio.run(wait_n(n, max_delay))
-    elasped = time.time() - s
+    elasped: float = time.time() - s
     return (elasped/n)
